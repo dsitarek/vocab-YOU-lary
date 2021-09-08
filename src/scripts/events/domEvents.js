@@ -16,7 +16,7 @@ const domSubmitEvents = (uid) => {
         tech: document.querySelector('#tech').value,
         definition: document.querySelector('#definition').value,
         public: document.querySelector('#public').value,
-        timestamp: '',
+        timestamp: new Date(),
         user_id: uid
       };
       createTerm(termObj).then(showTerms);

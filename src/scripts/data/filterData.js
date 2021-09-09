@@ -11,10 +11,14 @@ const getFilters = async () => {
 };
 
 const getFilteredTerms = (uid, techSelected) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/vocabulary.json?orderby="user_id"&equalTo="${uid}"`)
+  axios.get(`${dbUrl}/vocabulary.json?orderBy="user_id"&equalTo="${uid}"`)
     .then((terms) => {
-      const filteredTerms = terms.filter((term) => term.tech === techSelected);
-      resolve(filteredTerms);
+      if (techSelected !== 'all') {
+        const filteredTerms = (Object.values(terms.data)).filter((term) => term.tech === techSelected);
+        resolve(filteredTerms);
+      } else {
+        resolve(Object.values(terms.data));
+      }
     }).catch((err) => reject(err));
 });
 

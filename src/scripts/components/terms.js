@@ -1,5 +1,5 @@
 import clearDom from '../helpers/clearDom';
-import filterDropdown from './filter';
+// import filterDropdown from './filter';
 
 const showTerms = (arr) => {
   clearDom();
@@ -16,7 +16,7 @@ const showTerms = (arr) => {
 </div>`;
   });
   document.querySelector('#cardContainer').innerHTML = domString;
-  filterDropdown();
+  document.querySelector('#dropdownContainer').style.display = 'block';
 };
 
 export default showTerms;

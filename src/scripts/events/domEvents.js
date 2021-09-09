@@ -47,18 +47,13 @@ const domSubmitEvents = (uid) => {
   });
 };
 
-const filterEvent = () => {
-  document.querySelector('#techFilter').addEventListener('change', () => {
-    const techSelected = document.querySelector('#techFilter').value;
-    getFilteredTerms(techSelected).then(showTerms);
+const filterEvent = (uid) => {
+  document.querySelector('#app').addEventListener('change', (e) => {
+    if (e.target.id.includes('techFilter')) {
+      const techSelected = document.querySelector('#techFilter').value;
+      getFilteredTerms(uid, techSelected).then(showTerms);
+    }
   });
 };
-
-// const filterEvent = () => {
-//   document.querySelector('#techFilter').addEventListener('change', () => {
-//     const techSelected = document.querySelector('#techFilter').value;
-//     getFilteredTerms(techSelected).then(showTerms);
-//   });
-// };
 
 export { domClickEvents, domSubmitEvents, filterEvent };

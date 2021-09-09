@@ -16,7 +16,7 @@ const addTermForm = (obj = {}) => {
     <textarea cols="80" rows="3" required class="form-control" id="definition" aria-describedby="definition" placeholder="Enter definition">${obj.definition || ''}</textarea>
   </div>
   <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="public" value="${obj.public ? 'checked' : ''}">
+    <input type="checkbox" class="form-check-input" id="public" ${obj.public ? 'checked' : ''}>
     <label class="form-check-label" for="public">Public</label>
   </div>
   <button type="submit" class="btn btn-primary" id="submit-term--${obj.firebaseKey}">Submit</button>

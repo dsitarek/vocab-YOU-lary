@@ -9,11 +9,11 @@ import { domClickEvents, domSubmitEvents } from '../events/domEvents';
 const startApp = (user) => {
   buildDom();
   renderNavbar();
-  logoutButton();
-  navEvents();
+  logoutButton(user.displayName);
+  navEvents(user.uid);
   domClickEvents(user.uid);
   domSubmitEvents(user.uid);
-  getTerms().then((terms) => showTerms(terms));
+  getTerms(user.uid).then((terms) => showTerms(terms));
 };
 
 export default startApp;

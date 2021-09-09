@@ -1,1 +1,257 @@
-{}
+{
+    "vocabulary" : {
+      "-Mj1qd5CnA8D21qIDKoS" : {
+        "definition" : "A collection of multiple elements, each identified by an index, also known as a key.",
+        "firebaseKey" : "-Mj1qd5CnA8D21qIDKoS",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-08T02:31:13.318Z",
+        "title" : "Array",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj1r6KunmGK-NazXSzb" : {
+        "definition" : "This method determines whether an array includes a certain value among its entries, returning true or false as appropriate.",
+        "firebaseKey" : "-Mj1r6KunmGK-NazXSzb",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-08T02:31:13.318Z",
+        "title" : "Array.prototype.includes()",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6uYvPYwOaK_id_-i7" : {
+        "definition" : "A command that tells how an object is to be acted upon.",
+        "firebaseKey" : "-Mj6uYvPYwOaK_id_-i7",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-09T00:17:09.466Z",
+        "title" : "Method",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6wVFPqYAgrPZv2TqI" : {
+        "definition" : "values passed into a function, which can then be accessed by the function through the name of the argument's respective parameter.",
+        "firebaseKey" : "-Mj6wVFPqYAgrPZv2TqI",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-09T00:25:38.748Z",
+        "title" : "Argument",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6wbUCfnq8_9eo3SmE" : {
+        "definition" : "The occurrence of events which are independent of the main programming flow.",
+        "firebaseKey" : "-Mj6wbUCfnq8_9eo3SmE",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-09T00:26:08.369Z",
+        "title" : "Asynchrony",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6wnAg81wrYN7U8xcG" : {
+        "definition" : "A special word used inside the opening tag to control the tag's behaviour.",
+        "firebaseKey" : "-Mj6wnAg81wrYN7U8xcG",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:26:56.272Z",
+        "title" : "Attribute",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6wzuaftOOz46I9Wap" : {
+        "definition" : "A data type with only two possible values, true or false, which is used in conditional statements as a means to change control flow.",
+        "firebaseKey" : "-Mj6wzuaftOOz46I9Wap",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-09T00:27:48.426Z",
+        "title" : "Boolean",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6xB-mf5I3XYKzCXRd" : {
+        "definition" : "The practice of writing phrases without spaces or punctuation, indicating the separation of words with a single capitalized letter, and the first word starting with either case.",
+        "firebaseKey" : "-Mj6xB-mf5I3XYKzCXRd",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-09T00:28:37.929Z",
+        "title" : "Camel case",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6xWlvDdSVKhRGsrEu" : {
+        "definition" : "A general-purpose programming language, standardised by Ecma International. It is a JavaScript standard meant to ensure the interoperability of web pages across different web browsers.",
+        "firebaseKey" : "-Mj6xWlvDdSVKhRGsrEu",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-09T00:30:07.058Z",
+        "title" : "ECMAScript",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6xgLqRv8naYr32Utr" : {
+        "definition" : "An individual component of an HTML document or web page, once this has been parsed into the Document Object Model.",
+        "firebaseKey" : "-Mj6xgLqRv8naYr32Utr",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:30:50.448Z",
+        "title" : "Element",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6xr-CwpSAdvvM0nN6" : {
+        "definition" : "Action or occurrence recognized by software, often originating asynchronously from the external environment, that may be handled by the software.",
+        "firebaseKey" : "-Mj6xr-CwpSAdvvM0nN6",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-09T00:31:34.066Z",
+        "title" : "Event",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6y1TqlvepN8fb7UX7" : {
+        "definition" : "An open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays (or other serializable values). It is a common data format with a diverse range of functionality in data interchange including communication of web applications with servers.",
+        "firebaseKey" : "-Mj6y1TqlvepN8fb7UX7",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-09T00:32:21.074Z",
+        "title" : "JSON",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6yFGgxrYdAAYvLLQh" : {
+        "definition" : "open-source, cross-platform JavaScript runtime environment for executing JavaScript code server-side, to produce dynamic web page content before the page is sent to the user's web browser. It is built upon the Chrome V8 JavaScript engine.",
+        "firebaseKey" : "-Mj6yFGgxrYdAAYvLLQh",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-09T00:33:17.553Z",
+        "title" : "Node.js",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6yjqpjZ5tGiuUN114" : {
+        "definition" : "A proxy for a value not necessarily known when created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason.  Can either be fulfilled with a value or rejected with a reason (error).",
+        "firebaseKey" : "-Mj6yjqpjZ5tGiuUN114",
+        "public" : true,
+        "tech" : "Javascript",
+        "timestamp" : "2021-09-09T00:35:26.783Z",
+        "title" : "Promise",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6z8cmxz10-2KSpWrf" : {
+        "definition" : "Text description of a graphic that appears before the graphic is loaded into the browser. After an image has been downloaded on the browser, it may briefly appear over the graphic as you rollover the mouse over the graphic.",
+        "firebaseKey" : "-Mj6z8cmxz10-2KSpWrf",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:37:12.485Z",
+        "title" : "Alt text",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6zFI4pj0MOvS3pfj5" : {
+        "definition" : "Used to define a hypertext link.",
+        "firebaseKey" : "-Mj6zFI4pj0MOvS3pfj5",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:37:39.811Z",
+        "title" : "Anchor tag",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6zUX5hCwdrdgHnbCI" : {
+        "definition" : "An HTML instruction that tells the browser to turn off a specific feature of an opening tag.",
+        "firebaseKey" : "-Mj6zUX5hCwdrdgHnbCI",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:38:42.207Z",
+        "title" : "Closing tag",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6zftsCd_UcpM_Mvq0" : {
+        "definition" : "A mechanism that enables a user to supply input to the web page author.",
+        "firebaseKey" : "-Mj6zftsCd_UcpM_Mvq0",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:39:32.894Z",
+        "title" : "Form",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj6zxa4t1J2ekfLWjQs" : {
+        "definition" : "Starts the header part of your document. Everything between these is mainly used to help your browser and search engines classify your page. Using this is optional, but recommended.",
+        "firebaseKey" : "-Mj6zxa4t1J2ekfLWjQs",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:40:45.357Z",
+        "title" : "Head tag",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj7-0FamQWf9CHF94be" : {
+        "definition" : "A group of tags that give page and creator information specifically to the search engines.",
+        "firebaseKey" : "-Mj7-0FamQWf9CHF94be",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:41:00.366Z",
+        "title" : "Meta tag",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj7-7COuYyduXFR5hFj" : {
+        "definition" : "A list where each item is numbered in order.",
+        "firebaseKey" : "-Mj7-7COuYyduXFR5hFj",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:41:28.833Z",
+        "title" : "Ordered List",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj7-E7uN7Op_lEgPtke" : {
+        "definition" : "A list where each item is bulleted.",
+        "firebaseKey" : "-Mj7-E7uN7Op_lEgPtke",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:41:57.202Z",
+        "title" : "Unordered List",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj7-LZcvhHgibY1kZp6" : {
+        "definition" : "Adds a script, usually a JavaScript into your page.",
+        "firebaseKey" : "-Mj7-LZcvhHgibY1kZp6",
+        "public" : true,
+        "tech" : "HTML",
+        "timestamp" : "2021-09-09T00:42:27.656Z",
+        "title" : "Script tag",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj7-eF68cOVu3O5uy7M" : {
+        "definition" : "Adjusts spacing between the content and the border (edge of the element.). We can adjust this value with CSS to move the border closer to or farther from the content.",
+        "firebaseKey" : "-Mj7-eF68cOVu3O5uy7M",
+        "public" : true,
+        "tech" : "CSS",
+        "timestamp" : "2021-09-09T00:43:48.170Z",
+        "title" : "Padding",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj7-maKFeHsdOiT1Z_A" : {
+        "definition" : "The space around the element. The larger the it is, the more space between our element and the elements around it.",
+        "firebaseKey" : "-Mj7-maKFeHsdOiT1Z_A",
+        "public" : true,
+        "tech" : "CSS",
+        "timestamp" : "2021-09-09T00:44:22.394Z",
+        "title" : "Margin",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj7-u3C13ur-IJKaTPy" : {
+        "definition" : "Used in CSS to select the parts of the HTML that are being styled. You can use several different methods for selecting an element.",
+        "firebaseKey" : "-Mj7-u3C13ur-IJKaTPy",
+        "public" : true,
+        "tech" : "CSS",
+        "timestamp" : "2021-09-09T00:44:52.964Z",
+        "title" : "Selectors",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj70UkfSPwYkBrhc6ro" : {
+        "definition" : "A one-dimensional layout method for arranging items in rows or columns. Items flex (expand) to fill additional space or shrink to fit into smaller spaces.",
+        "firebaseKey" : "-Mj70UkfSPwYkBrhc6ro",
+        "public" : true,
+        "tech" : "CSS",
+        "timestamp" : "2021-09-09T00:47:27.091Z",
+        "title" : "Flexbox",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      },
+      "-Mj70bb39rABy4C4njr5" : {
+        "definition" : "Sets the style rules for different media types/devices/sizes",
+        "firebaseKey" : "-Mj70bb39rABy4C4njr5",
+        "public" : true,
+        "tech" : "CSS",
+        "timestamp" : "2021-09-09T00:47:59.538Z",
+        "title" : "Media Query",
+        "user_id" : "FV5p5rFvmpZQxEdCK6mDfDuZ7DT2"
+      }
+    }
+  }
+  

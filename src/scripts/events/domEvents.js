@@ -3,6 +3,7 @@ import {
 } from '../data/termsData';
 import showTerms from '../components/terms';
 import addTermForm from '../domComponents/addTermForm';
+import { getFilteredTerms } from '../data/filterData';
 
 const domClickEvents = (uid) => {
   document.querySelector('#app').addEventListener('click', (e) => {
@@ -24,7 +25,7 @@ const domSubmitEvents = (uid) => {
         title: document.querySelector('#title').value,
         tech: document.querySelector('#tech').value,
         definition: document.querySelector('#definition').value,
-        public: document.querySelector('#public').value,
+        public: document.querySelector('#public').checked,
         timestamp: new Date(),
         user_id: uid
       };
@@ -37,7 +38,7 @@ const domSubmitEvents = (uid) => {
         title: document.querySelector('#title').value,
         tech: document.querySelector('#tech').value,
         definition: document.querySelector('#definition').value,
-        public: document.querySelector('#public').value,
+        public: document.querySelector('#public').checked,
         user_id: uid,
         firebaseKey
       };
@@ -46,4 +47,13 @@ const domSubmitEvents = (uid) => {
   });
 };
 
-export { domClickEvents, domSubmitEvents };
+const filterEvent = (uid) => {
+  document.querySelector('#app').addEventListener('change', (e) => {
+    if (e.target.id.includes('techFilter')) {
+      const techSelected = document.querySelector('#techFilter').value;
+      getFilteredTerms(uid, techSelected).then(showTerms);
+    }
+  });
+};
+
+export { domClickEvents, domSubmitEvents, filterEvent };

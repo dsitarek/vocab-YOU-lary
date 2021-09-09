@@ -1,4 +1,5 @@
 import clearDom from '../helpers/clearDom';
+// import filterDropdown from './filter';
 
 const showTerms = (arr) => {
   clearDom();
@@ -13,8 +14,9 @@ const showTerms = (arr) => {
     <i class="btn btn-success far fa-edit" id="edit-term--${term.firebaseKey}"></i>
   </div>
 </div>`;
-    document.querySelector('#cardContainer').innerHTML = domString;
   });
+  document.querySelector('#cardContainer').innerHTML = domString;
+  document.querySelector('#dropdownContainer').style.display = 'block';
 };
 
 export default showTerms;

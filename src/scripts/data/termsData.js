@@ -57,6 +57,12 @@ const getSearchedTerm = async (uid, search) => {
   return searchReturn;
 };
 
+const getCommunityTerms = () => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/vocabulary.json?orderBy="public"&equalTo=true`)
+    .then((terms) => resolve(Object.values(terms.data)))
+    .catch((err) => reject(err));
+});
+
 export {
-  getTerms, createTerm, deleteTerm, editTerm, getSingleTerm, getSortedTerms, getSearchedTerm
+  getTerms, createTerm, deleteTerm, editTerm, getSingleTerm, getSortedTerms, getSearchedTerm, getCommunityTerms
 };

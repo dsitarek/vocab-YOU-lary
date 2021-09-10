@@ -15,9 +15,12 @@ const renderNavbar = () => {
             <li class="nav-item">
               <a class="nav-link" href="#" id="addTerm">Add a term</a>
             </li>
-            <li class="nav-item" id="logButton">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="community">Community</a>
             </li>
           </ul>
+          <div class="nav-item" id="logButton">
+            </div>
           <form id="searchForm" class="d-flex">
             <input id="searchBar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>

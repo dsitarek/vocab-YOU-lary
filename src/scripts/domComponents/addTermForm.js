@@ -24,6 +24,7 @@ const addTermForm = (obj = {}) => {
 
   document.querySelector('#formContainer').innerHTML = domString;
   document.getElementById('dropdownContainer').style.display = 'none';
+  document.getElementById('sortContainer').style.display = 'none';
 };
 
 export default addTermForm;

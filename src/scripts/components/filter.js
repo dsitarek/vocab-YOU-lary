@@ -5,7 +5,7 @@ const filterDropdown = async () => {
   let domString = '<select id="techFilter" class="form-select" aria-label="Default select example"><option value="all">All</option>';
   arrOfFilters.forEach((tech) => { domString += `<option value="${tech}">${tech}</option>`; });
 
-  domString += '</ul>';
+  domString += '</select>';
 
   document.querySelector('#dropdownContainer').innerHTML = domString;
 };

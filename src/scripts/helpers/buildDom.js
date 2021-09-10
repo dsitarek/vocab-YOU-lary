@@ -3,8 +3,8 @@ const buildDom = () => {
         <div id="navContainer"></div>
         <div id="pageContainer">
           <div id="titleContainer">
-            <div id="dropdownContainer">
-            </div>
+            <div id="dropdownContainer"></div>
+            <div id="sortContainer"></div>
           </div>
           <div id="formContainer"></div>
           <div id="cardContainer"></div>

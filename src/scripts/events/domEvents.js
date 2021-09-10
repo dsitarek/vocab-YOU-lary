@@ -1,5 +1,5 @@
 import {
-  createTerm, deleteTerm, editTerm, getSingleTerm,
+  createTerm, deleteTerm, editTerm, getSingleTerm, getSearchedTerm
 } from '../data/termsData';
 import showTerms from '../components/terms';
 import addTermForm from '../domComponents/addTermForm';
@@ -57,4 +57,17 @@ const filterEvent = (uid) => {
   });
 };
 
-export { domClickEvents, domSubmitEvents, filterEvent };
+const searchEvent = (uid) => {
+  document.querySelector('#app').addEventListener('submit', (e) => {
+    if (e.target.id.includes('searchForm')) {
+      const searchValue = document.querySelector('#searchBar').value;
+      e.preventDefault();
+      getSearchedTerm(uid, searchValue).then((arr) => sortBy(arr)).then(showTerms);
+      document.querySelector('#searchForm').reset();
+    }
+  });
+};
+
+export {
+  domClickEvents, domSubmitEvents, filterEvent, searchEvent
+};

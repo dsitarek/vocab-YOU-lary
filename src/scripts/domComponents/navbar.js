@@ -18,8 +18,8 @@ const renderNavbar = () => {
             <li class="nav-item" id="logButton">
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <form id="searchForm" class="d-flex">
+            <input id="searchBar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>

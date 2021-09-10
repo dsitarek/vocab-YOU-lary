@@ -5,15 +5,15 @@ const dbUrl = firebaseConfig.databaseURL;
 
 const getTerms = (uid) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/vocabulary.json?orderBy="user_id"&equalTo="${uid}"`)
-    .then((response) => resolve(Object.values(response.data)))
+    .then((terms) => resolve(Object.values(terms.data)))
     .catch((err) => reject(err));
 });
 
 const createTerm = (termObj) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/vocabulary.json`, termObj)
-    .then((response) => {
-      const body = { firebaseKey: response.data.name };
-      axios.patch(`${dbUrl}/vocabulary/${response.data.name}.json`, body)
+    .then((term) => {
+      const body = { firebaseKey: term.data.name };
+      axios.patch(`${dbUrl}/vocabulary/${term.data.name}.json`, body)
         .then(() => {
           getTerms(termObj.user_id).then((terms) => resolve(terms));
         });
@@ -34,10 +34,23 @@ const editTerm = (editObj) => new Promise((resolve, reject) => {
 
 const getSingleTerm = (firebaseKey) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/vocabulary/${firebaseKey}.json`)
-    .then((response) => resolve(response.data))
+    .then((term) => resolve(term.data))
     .catch((err) => reject(err));
 });
 
+const getSortedTerms = (uid, sortMethod) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/vocabulary.json?orderBy="user_id"&equalTo="${uid}"`)
+    .then((terms) => {
+      if (sortMethod === 'A-Z') {
+        resolve(Object.values(terms.data).sort((a, b) => ((a.title > b.title) && 1) || -1));
+      } if (sortMethod === 'newest') {
+        resolve(Object.values(terms.data).sort((a, b) => a.timestamp.localeCompare(b.timestamp)));
+      } if (sortMethod === 'oldest') {
+        resolve(Object.values(terms.data).sort((a, b) => b.timestamp.localeCompare(a.timestamp)));
+      }
+    }).catch((err) => reject(err));
+});
+
 export {
-  getTerms, createTerm, deleteTerm, editTerm, getSingleTerm
+  getTerms, createTerm, deleteTerm, editTerm, getSingleTerm, getSortedTerms
 };

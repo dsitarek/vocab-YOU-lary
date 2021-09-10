@@ -1,9 +1,10 @@
 import {
-  createTerm, deleteTerm, editTerm, getSingleTerm
+  createTerm, deleteTerm, editTerm, getSingleTerm,
 } from '../data/termsData';
 import showTerms from '../components/terms';
 import addTermForm from '../domComponents/addTermForm';
 import { getFilteredTerms } from '../data/filterData';
+import sortBy from '../components/sortFunction';
 
 const domClickEvents = (uid) => {
   document.querySelector('#app').addEventListener('click', (e) => {
@@ -49,9 +50,9 @@ const domSubmitEvents = (uid) => {
 
 const filterEvent = (uid) => {
   document.querySelector('#app').addEventListener('change', (e) => {
-    if (e.target.id.includes('techFilter')) {
+    if (e.target.id.includes('techFilter') || e.target.id.includes('sortDropdown')) {
       const techSelected = document.querySelector('#techFilter').value;
-      getFilteredTerms(uid, techSelected).then(showTerms);
+      getFilteredTerms(uid, techSelected).then((arr) => sortBy(arr)).then(showTerms);
     }
   });
 };

@@ -17,6 +17,7 @@ const showTerms = (arr) => {
   });
   document.querySelector('#cardContainer').innerHTML = domString;
   document.querySelector('#dropdownContainer').style.display = 'block';
+  document.querySelector('#sortContainer').style.display = 'block';
 };
 
 export default showTerms;

@@ -51,6 +51,12 @@ const getSortedTerms = (uid, sortMethod) => new Promise((resolve, reject) => {
     }).catch((err) => reject(err));
 });
 
+const getSearchedTerm = async (uid, search) => {
+  const terms = await axios.get(`${dbUrl}/vocabulary.json?orderBy="user_id"&equalTo="${uid}"`);
+  const searchReturn = (Object.values(terms.data)).filter((obj) => (obj.title.toLowerCase().includes(search)) || (obj.definition.toLowerCase().includes(search)));
+  return searchReturn;
+};
+
 export {
-  getTerms, createTerm, deleteTerm, editTerm, getSingleTerm, getSortedTerms
+  getTerms, createTerm, deleteTerm, editTerm, getSingleTerm, getSortedTerms, getSearchedTerm
 };

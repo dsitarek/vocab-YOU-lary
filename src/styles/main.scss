@@ -52,3 +52,21 @@ body {
   padding: 0;
   min-height: 100%;
 }
+
+#logButton {
+  align-self: right;
+  color: #9b9d9e;
+}
+
+#logButton a:link {
+  color: #9b9d9e;
+}
+
+#logButton a:hover {
+  color: #c6c8c9;
+}
+
+#logButton a:visited {
+  color: #9b9d9e;
+
+}

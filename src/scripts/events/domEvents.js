@@ -16,6 +16,23 @@ const domClickEvents = (uid) => {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleTerm(firebaseKey).then(addTermForm);
     }
+
+    if (e.target.id.includes('copy-term')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      const copyTerm = async () => {
+        const getTermToCopy = await getSingleTerm(firebaseKey);
+        const termObj = {
+          title: getTermToCopy.title,
+          tech: getTermToCopy.tech,
+          definition: getTermToCopy.definition,
+          public: false,
+          timestamp: new Date(),
+          user_id: uid
+        };
+        return termObj;
+      };
+      copyTerm().then(createTerm).then((arr) => showTerms(arr, uid));
+    }
   });
 };
 

@@ -10,7 +10,7 @@ const domClickEvents = (uid) => {
   document.querySelector('#app').addEventListener('click', (e) => {
     if (e.target.id.includes('delete-term')) {
       const [, firebaseKey] = e.target.id.split('--');
-      deleteTerm(firebaseKey, uid).then(showTerms);
+      deleteTerm(firebaseKey, uid).then((arr) => showTerms(arr, uid));
     }
     if (e.target.id.includes('edit-term')) {
       const [, firebaseKey] = e.target.id.split('--');
@@ -30,7 +30,7 @@ const domSubmitEvents = (uid) => {
         timestamp: new Date(),
         user_id: uid
       };
-      createTerm(termObj).then(showTerms);
+      createTerm(termObj).then((arr) => showTerms(arr, uid));
     }
 
     if (e.target.id.includes('updateTermForm')) {
@@ -43,7 +43,7 @@ const domSubmitEvents = (uid) => {
         user_id: uid,
         firebaseKey
       };
-      editTerm(termObj).then(showTerms);
+      editTerm(termObj).then((arr) => showTerms(arr, uid));
     }
   });
 };
@@ -52,7 +52,7 @@ const filterEvent = (uid) => {
   document.querySelector('#app').addEventListener('change', (e) => {
     if (e.target.id.includes('techFilter') || e.target.id.includes('sortDropdown')) {
       const techSelected = document.querySelector('#techFilter').value;
-      getFilteredTerms(uid, techSelected).then((arr) => sortBy(arr)).then(showTerms);
+      getFilteredTerms(uid, techSelected).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
     }
   });
 };
@@ -62,7 +62,7 @@ const searchEvent = (uid) => {
     if (e.target.id.includes('searchForm')) {
       const searchValue = document.querySelector('#searchBar').value;
       e.preventDefault();
-      getSearchedTerm(uid, searchValue).then((arr) => sortBy(arr)).then(showTerms);
+      getSearchedTerm(uid, searchValue).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
       document.querySelector('#searchForm').reset();
     }
   });

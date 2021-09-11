@@ -22,7 +22,7 @@ const startApp = (user) => {
   filterEvent(user.uid);
   sortDropdown();
   searchEvent(user.uid);
-  getTerms(user.uid).then((terms) => sortBy(terms)).then(showTerms);
+  getTerms(user.uid).then((terms) => sortBy(terms)).then((arr) => showTerms(arr, user.uid));
 };
 
 export default startApp;

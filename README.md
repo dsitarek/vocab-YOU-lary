@@ -3,7 +3,21 @@
 [View App](https://djs-vocabulary.netlify.app/)
 ## Relevant Links <!-- Link to all the things that are required outside of the ones that have their own section -->
 - [Project Board](https://github.com/dsitarek/vocab-YOU-lary/projects/1)
-
+## Features
+- Read terms
+- Add terms
+- Add language/tech
+- Delete terms
+- Update terms
+- Filter by tech/language
+- Sort by A-Z, oldest, newest
+- Search your terms
+- Public/private terms
+- Community page to view public terms
+- Public terms only editable by creator
+- Copy a public term to your terms
+- Flash cards for studying made from your terms
+- 
 ## Images
 ![vocab1](https://user-images.githubusercontent.com/82732748/132940204-9c9678db-e8f5-4c0b-9c05-f8cede9989c4.png)
 

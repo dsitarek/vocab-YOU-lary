@@ -1,14 +1,15 @@
 import { getTerms, getCommunityTerms } from '../data/termsData';
 import addTermForm from '../domComponents/addTermForm';
 import showTerms from '../components/terms';
+import sortBy from '../components/sortFunction';
 
 const navEvents = (uid) => {
   document.querySelector('#addTerm').addEventListener('click', () => addTermForm(uid));
 
-  document.querySelector('#homeLink').addEventListener('click', () => getTerms(uid).then(showTerms));
+  document.querySelector('#homeLink').addEventListener('click', () => getTerms(uid).then((terms) => sortBy(terms)).then((arr) => showTerms(arr, uid)));
 
   document.querySelector('#community').addEventListener('click', async () => {
-    await getCommunityTerms().then(showTerms);
+    await getCommunityTerms().then((arr) => showTerms(arr, uid));
     document.getElementById('dropdownContainer').style.display = 'none';
     document.getElementById('sortContainer').style.display = 'none';
   });

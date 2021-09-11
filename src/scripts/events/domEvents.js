@@ -2,18 +2,19 @@ import {
   createTerm, deleteTerm, editTerm, getSingleTerm, getSearchedTerm, getTerms, getCommunityTerms
 } from '../data/termsData';
 import showTerms from '../components/terms';
-import addTermForm from '../domComponents/addTermForm';
-import sortBy from '../components/sortFunction';
+import addTermForm from '../components/addTermForm';
+import sortBy from '../helpers/sortFunction';
 import filterBy from '../helpers/filterFunction';
-import filterDropdown from '../helpers/filterDropdown';
+import filterDropdown from '../components/filterDropdown';
 
 const domClickEvents = (uid) => {
-  document.querySelector('#app').addEventListener('click', async (e) => {
+  document.querySelector('#pageContainer').addEventListener('click', async (e) => {
     if (e.target.id.includes('delete-term')) {
       const [, firebaseKey] = e.target.id.split('--');
-      await deleteTerm(firebaseKey, uid).then((arr) => showTerms(arr, uid));
+      await deleteTerm(firebaseKey, uid).then((arr) => filterBy(arr)).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
       if (document.getElementById('communityTechFilter')) document.getElementById('communityTechFilter').setAttribute('id', 'techFilter');
       if (document.getElementById('communitySortDropdown')) document.getElementById('communitySortDropdown').setAttribute('id', 'sortDropdown');
+      filterDropdown();
     }
     if (e.target.id.includes('edit-term')) {
       const [, firebaseKey] = e.target.id.split('--');
@@ -37,7 +38,6 @@ const domClickEvents = (uid) => {
       await copyTerm().then(createTerm).then((arr) => showTerms(arr, uid));
       if (document.getElementById('communityTechFilter')) document.getElementById('communityTechFilter').setAttribute('id', 'techFilter');
       if (document.getElementById('communitySortDropdown')) document.getElementById('communitySortDropdown').setAttribute('id', 'sortDropdown');
-      filterDropdown();
     }
     if (e.target.id.includes('new-card-btn')) {
       document.querySelector('#flashCards').click();
@@ -46,7 +46,7 @@ const domClickEvents = (uid) => {
 };
 
 const domSubmitEvents = (uid) => {
-  document.querySelector('#app').addEventListener('submit', async (e) => {
+  document.querySelector('#pageContainer').addEventListener('submit', async (e) => {
     if (e.target.id.includes('newTermForm')) {
       e.preventDefault();
       const termObj = {
@@ -78,7 +78,7 @@ const domSubmitEvents = (uid) => {
 };
 
 const filterEvent = (uid) => {
-  document.querySelector('#app').addEventListener('change', (e) => {
+  document.querySelector('#pageContainer').addEventListener('change', (e) => {
     if (e.target.id.includes('techFilter') || e.target.id.includes('sortDropdown')) {
       getTerms(uid).then((arr) => filterBy(arr)).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
     }
@@ -89,7 +89,7 @@ const filterEvent = (uid) => {
 };
 
 const searchEvent = (uid) => {
-  document.querySelector('#app').addEventListener('submit', (e) => {
+  document.querySelector('#pageContainer').addEventListener('submit', (e) => {
     if (e.target.id.includes('searchForm')) {
       const searchValue = document.querySelector('#searchBar').value;
       e.preventDefault();

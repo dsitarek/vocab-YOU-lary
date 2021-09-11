@@ -1,5 +1,5 @@
-import renderNavbar from '../domComponents/navbar';
-import buildDom from './buildDom';
+import renderNavbar from '../components/navbar';
+import buildDom from '../components/buildDom';
 import logoutButton from '../components/logoutButton';
 import showTerms from '../components/terms';
 import { getTerms } from '../data/termsData';
@@ -7,9 +7,9 @@ import navEvents from '../events/navEvents';
 import {
   domClickEvents, domSubmitEvents, filterEvent, searchEvent
 } from '../events/domEvents';
-import filterDropdown from './filterDropdown';
-import sortDropdown from './sortDropdown';
-import sortBy from '../components/sortFunction';
+import filterDropdown from '../components/filterDropdown';
+import sortDropdown from '../components/sortDropdown';
+import sortBy from './sortFunction';
 
 const startApp = (user) => {
   buildDom();
@@ -23,6 +23,7 @@ const startApp = (user) => {
   sortDropdown();
   searchEvent(user.uid);
   getTerms(user.uid).then((terms) => sortBy(terms)).then((arr) => showTerms(arr, user.uid));
+  console.warn(user ? user.uid : null);
 };
 
 export default startApp;

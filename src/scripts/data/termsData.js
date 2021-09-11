@@ -50,6 +50,12 @@ const getCommunityTerms = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const getFlashCard = async (uid) => {
+  const terms = await getTerms(uid);
+  const randomCard = terms[Math.floor(Math.random() * (terms.length - 1))];
+  return randomCard;
+};
+
 export {
-  getTerms, createTerm, deleteTerm, editTerm, getSingleTerm, getSearchedTerm, getCommunityTerms
+  getTerms, createTerm, deleteTerm, editTerm, getSingleTerm, getSearchedTerm, getCommunityTerms, getFlashCard
 };

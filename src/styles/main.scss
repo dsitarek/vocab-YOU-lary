@@ -1,7 +1,9 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
 
 $base-color: rgb(122, 122, 122);
+$dropdown-color: rgb(43, 43, 43);
 
 body {
   background-color: $base-color;
@@ -53,6 +55,10 @@ body {
   text-shadow: 1px 1px 2px black;
 }
 
+.required {
+  color: red;
+}
+
 #google-auth {
   border: none;
   min-width: 100%;
@@ -63,6 +69,10 @@ body {
 #logButton {
   align-self: right;
   color: #9b9d9e;
+}
+
+#logButton img {
+  width: 90%;
 }
 
 #logButton a:link {
@@ -81,4 +91,120 @@ body {
 #formCheck {
   justify-self: center;
   text-align: left;
+}
+
+#titleContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sortContainer {
+  display: flex;
+  margin-left: .5em;
+  font-weight: 500;
+  color: black;
+}
+
+#dropdownContainer {
+  display: flex;
+  margin-left: .5em;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+.sort-dropdown {
+  width: 100%;
+  color: white;
+  margin-left: .5em;
+  background-color: $dropdown-color;
+}
+
+.filter-dropdown {
+  width: 100%;
+  color: white;
+  margin-left: .5em;
+  background-color: $dropdown-color;
+}
+
+.dropdown-label {
+  font-weight: 500;
+  margin-left: .5em;
+  margin-right: -.5em;
+  line-height: 2em;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 700px;
+  height: 400px;
+  perspective: 1100px;
+  font-family: 'Caveat';
+  font-weight: 700;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:active .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid white;
+  background-image: url("https://1001freedownloads.s3.amazonaws.com/vector/thumb/109019/index_card.png");
+  padding: .5em;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  color: black;
+  transform: rotateY(180deg);
+}
+
+#flashContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flash-title {
+  margin-top: -.1em;
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+.flash-definition {
+  margin-top: 2.75em;
+  font-size: 1.7em;
+}
+
+.flash-tech {
+  margin-top: 1.6em;
+  font-size: 2em;
+}
+
+#new-card-btn {
+  margin-top: 1em
+}
+
+#flashDirections {
+  margin: -1.5em 0 1em 0;
+  color: black;
+  font-style: italic;
 }

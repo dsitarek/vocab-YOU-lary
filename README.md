@@ -9,5 +9,7 @@
 
 ![vocab-YOU-lary (1)](https://user-images.githubusercontent.com/82732748/132940159-a2feebe7-f186-4b01-921a-fad92b95a175.jpg)
 
+[vocabERD.pdf](https://github.com/dsitarek/vocab-YOU-lary/files/7148390/vocabERD.pdf)
+
 ## Contributors
 - [Daniel Sitarek](https://github.com/dsitarek)

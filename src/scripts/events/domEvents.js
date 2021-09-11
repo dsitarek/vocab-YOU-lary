@@ -39,6 +39,7 @@ const domClickEvents = (uid) => {
 const domSubmitEvents = (uid) => {
   document.querySelector('#app').addEventListener('submit', (e) => {
     if (e.target.id.includes('newTermForm')) {
+      e.preventDefault();
       const termObj = {
         title: document.querySelector('#title').value,
         tech: document.querySelector('#tech').value,
@@ -47,10 +48,11 @@ const domSubmitEvents = (uid) => {
         timestamp: new Date(),
         user_id: uid
       };
-      createTerm(termObj).then((arr) => showTerms(arr, uid));
+      createTerm(termObj).then((arr) => filterBy(arr)).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
     }
 
     if (e.target.id.includes('updateTermForm')) {
+      e.preventDefault();
       const [, firebaseKey] = e.target.id.split('--');
       const termObj = {
         title: document.querySelector('#title').value,
@@ -60,7 +62,7 @@ const domSubmitEvents = (uid) => {
         user_id: uid,
         firebaseKey
       };
-      editTerm(termObj).then((arr) => showTerms(arr, uid));
+      editTerm(termObj).then((arr) => filterBy(arr)).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
     }
   });
 };

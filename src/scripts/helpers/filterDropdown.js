@@ -1,4 +1,4 @@
-import { getFilters } from '../data/filterData';
+import getFilters from '../data/filterData';
 
 const filterDropdown = async () => {
   const arrOfFilters = await getFilters();

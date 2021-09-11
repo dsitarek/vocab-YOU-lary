@@ -17,7 +17,7 @@ const addTermForm = (obj = {}) => {
   </div>
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="public" ${obj.public ? 'checked' : ''}>
-    <label class="form-check-label" for="public">Public</label>
+    <label id="formCheck" class="form-check-label" for="public">Public</label>
   </div>
   <button type="submit" class="btn btn-primary" id="submit-term--${obj.firebaseKey}">Submit</button>
 </form>`;

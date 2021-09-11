@@ -1,10 +1,10 @@
 import {
-  createTerm, deleteTerm, editTerm, getSingleTerm, getSearchedTerm
+  createTerm, deleteTerm, editTerm, getSingleTerm, getSearchedTerm, getTerms, getCommunityTerms
 } from '../data/termsData';
 import showTerms from '../components/terms';
 import addTermForm from '../domComponents/addTermForm';
-import { getFilteredTerms } from '../data/filterData';
 import sortBy from '../components/sortFunction';
+import filterBy from '../helpers/filterFunction';
 
 const domClickEvents = (uid) => {
   document.querySelector('#app').addEventListener('click', (e) => {
@@ -68,8 +68,10 @@ const domSubmitEvents = (uid) => {
 const filterEvent = (uid) => {
   document.querySelector('#app').addEventListener('change', (e) => {
     if (e.target.id.includes('techFilter') || e.target.id.includes('sortDropdown')) {
-      const techSelected = document.querySelector('#techFilter').value;
-      getFilteredTerms(uid, techSelected).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
+      getTerms(uid).then((arr) => filterBy(arr)).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
+    }
+    if (e.target.id.includes('communityTechFilter') || e.target.id.includes('communitySortDropdown')) {
+      getCommunityTerms().then((arr) => filterBy(arr)).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
     }
   });
 };
@@ -79,7 +81,7 @@ const searchEvent = (uid) => {
     if (e.target.id.includes('searchForm')) {
       const searchValue = document.querySelector('#searchBar').value;
       e.preventDefault();
-      getSearchedTerm(uid, searchValue).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
+      getSearchedTerm(uid, searchValue).then((arr) => filterBy(arr)).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
       document.querySelector('#searchForm').reset();
     }
   });

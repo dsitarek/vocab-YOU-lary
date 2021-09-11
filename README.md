@@ -17,7 +17,8 @@
 - Public terms only editable by creator
 - Copy a public term to your terms
 - Flash cards for studying made from your terms
-- 
+- Mobile compatibility
+
 ## Images
 ![vocab1](https://user-images.githubusercontent.com/82732748/132940204-9c9678db-e8f5-4c0b-9c05-f8cede9989c4.png)
 

@@ -2,6 +2,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 $base-color: rgb(122, 122, 122);
+$dropdown-color: rgb(43, 43, 43);
 
 body {
   background-color: $base-color;
@@ -81,4 +82,44 @@ body {
 #formCheck {
   justify-self: center;
   text-align: left;
+}
+
+#titleContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sortContainer {
+  display: flex;
+  margin-left: .5em;
+  font-weight: 500;
+  color: black;
+}
+
+#dropdownContainer {
+  display: flex;
+  margin-left: .5em;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+.sort-dropdown {
+  width: 100%;
+  color: white;
+  margin-left: .5em;
+  background-color: $dropdown-color;
+}
+
+.filter-dropdown {
+  width: 100%;
+  color: white;
+  margin-left: .5em;
+  background-color: $dropdown-color;
+}
+
+.dropdown-label {
+  font-weight: 500;
+  margin-left: .5em;
+  margin-right: -.5em;
+  line-height: 2em;
 }

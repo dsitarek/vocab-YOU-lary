@@ -5,6 +5,7 @@ import showTerms from '../components/terms';
 import addTermForm from '../domComponents/addTermForm';
 import sortBy from '../components/sortFunction';
 import filterBy from '../helpers/filterFunction';
+import filterDropdown from '../helpers/filterDropdown';
 
 const domClickEvents = (uid) => {
   document.querySelector('#app').addEventListener('click', async (e) => {
@@ -36,12 +37,13 @@ const domClickEvents = (uid) => {
       await copyTerm().then(createTerm).then((arr) => showTerms(arr, uid));
       if (document.getElementById('communityTechFilter')) document.getElementById('communityTechFilter').setAttribute('id', 'techFilter');
       if (document.getElementById('communitySortDropdown')) document.getElementById('communitySortDropdown').setAttribute('id', 'sortDropdown');
+      filterDropdown();
     }
   });
 };
 
 const domSubmitEvents = (uid) => {
-  document.querySelector('#app').addEventListener('submit', (e) => {
+  document.querySelector('#app').addEventListener('submit', async (e) => {
     if (e.target.id.includes('newTermForm')) {
       e.preventDefault();
       const termObj = {
@@ -52,7 +54,8 @@ const domSubmitEvents = (uid) => {
         timestamp: new Date(),
         user_id: uid
       };
-      createTerm(termObj).then((arr) => filterBy(arr)).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
+      await createTerm(termObj).then((arr) => filterBy(arr)).then((arr) => sortBy(arr)).then((arr) => showTerms(arr, uid));
+      filterDropdown();
     }
 
     if (e.target.id.includes('updateTermForm')) {

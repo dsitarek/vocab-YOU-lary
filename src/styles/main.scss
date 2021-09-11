@@ -34,10 +34,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 1em;
+  justify-content: center;
 }
 
 .term-card {
-  flex-basis: 20%;
+  flex-basis: 22.5%;
   margin: .7em;
   background-image: linear-gradient(transparent, rgba(27, 27, 27, 0.5));
   border: 1px solid rgba(0, 0, 0, 0.7);
@@ -215,7 +216,7 @@ body {
   font-style: italic;
 }
 
-@media only screen and (max-width:1100px) {
+@media only screen and (max-width:991px) {
   .term-card {
     flex-basis: 46%;
   }
@@ -235,6 +236,18 @@ body {
   .flip-card {
     margin-top: 3em;
   }
+
+  #logButton img {
+    width: 25%;
+    margin-bottom: .5em;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    text-align: center;
+    margin-bottom: .5em;
+  }
+
   }
 
 @media only screen and (max-width:720px) {

@@ -6,14 +6,14 @@ import sortBy from '../components/sortFunction';
 const navEvents = (uid) => {
   document.querySelector('#addTerm').addEventListener('click', () => {
     addTermForm(uid);
-    if (document.getElementById('communitytechFilter')) document.getElementById('communitytechFilter').setAttribute('id', 'techFilter');
-    if (document.getElementById('communitysortDropdown'))document.getElementById('communitysortDropdown').setAttribute('id', 'sortDropdown');
+    if (document.getElementById('communityTechFilter')) document.getElementById('communityTechFilter').setAttribute('id', 'techFilter');
+    if (document.getElementById('communitySortDropdown'))document.getElementById('communitySortDropdown').setAttribute('id', 'sortDropdown');
   });
 
   document.querySelector('#homeLink').addEventListener('click', async () => {
     await getTerms(uid).then((terms) => sortBy(terms)).then((arr) => showTerms(arr, uid));
-    if (document.getElementById('communitytechFilter')) document.getElementById('communitytechFilter').setAttribute('id', 'techFilter');
-    if (document.getElementById('communitysortDropdown')) document.getElementById('communitysortDropdown').setAttribute('id', 'sortDropdown');
+    if (document.getElementById('communityTechFilter')) document.getElementById('communityTechFilter').setAttribute('id', 'techFilter');
+    if (document.getElementById('communitySortDropdown')) document.getElementById('communitySortDropdown').setAttribute('id', 'sortDropdown');
   });
 
   document.querySelector('#community').addEventListener('click', async () => {

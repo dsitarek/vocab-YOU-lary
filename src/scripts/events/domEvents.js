@@ -7,10 +7,12 @@ import sortBy from '../components/sortFunction';
 import filterBy from '../helpers/filterFunction';
 
 const domClickEvents = (uid) => {
-  document.querySelector('#app').addEventListener('click', (e) => {
+  document.querySelector('#app').addEventListener('click', async (e) => {
     if (e.target.id.includes('delete-term')) {
       const [, firebaseKey] = e.target.id.split('--');
-      deleteTerm(firebaseKey, uid).then((arr) => showTerms(arr, uid));
+      await deleteTerm(firebaseKey, uid).then((arr) => showTerms(arr, uid));
+      if (document.getElementById('communityTechFilter')) document.getElementById('communityTechFilter').setAttribute('id', 'techFilter');
+      if (document.getElementById('communitySortDropdown')) document.getElementById('communitySortDropdown').setAttribute('id', 'sortDropdown');
     }
     if (e.target.id.includes('edit-term')) {
       const [, firebaseKey] = e.target.id.split('--');
@@ -31,7 +33,9 @@ const domClickEvents = (uid) => {
         };
         return termObj;
       };
-      copyTerm().then(createTerm).then((arr) => showTerms(arr, uid));
+      await copyTerm().then(createTerm).then((arr) => showTerms(arr, uid));
+      if (document.getElementById('communityTechFilter')) document.getElementById('communityTechFilter').setAttribute('id', 'techFilter');
+      if (document.getElementById('communitySortDropdown')) document.getElementById('communitySortDropdown').setAttribute('id', 'sortDropdown');
     }
   });
 };

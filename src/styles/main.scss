@@ -245,3 +245,9 @@ body {
     flex-basis: 100%;
   }
 }
+
+@media only screen and (max-height:640px) {
+  .flip-card {
+    margin-top: -1.3em;
+  }
+}

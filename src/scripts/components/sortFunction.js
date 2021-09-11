@@ -1,5 +1,5 @@
 const sortBy = (arr) => {
-  const sortMethod = document.querySelector('#sortDropdown').value;
+  const sortMethod = document.querySelector('#sortDropdown') ? document.querySelector('#sortDropdown').value : document.querySelector('#communitySortDropdown').value;
   let sortedTerms = null;
   if (sortMethod === 'A-Z') {
     sortedTerms = (arr).sort((a, b) => ((a.title > b.title) && 1) || -1);

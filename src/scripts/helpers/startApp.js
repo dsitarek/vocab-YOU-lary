@@ -7,7 +7,7 @@ import navEvents from '../events/navEvents';
 import {
   domClickEvents, domSubmitEvents, filterEvent, searchEvent
 } from '../events/domEvents';
-import filterDropdown from '../components/filter';
+import filterDropdown from './filterDropdown';
 import sortDropdown from './sortDropdown';
 import sortBy from '../components/sortFunction';
 

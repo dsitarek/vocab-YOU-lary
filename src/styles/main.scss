@@ -221,6 +221,10 @@ body {
     flex-basis: 46%;
   }
 
+  .term-form {
+    margin: 3em 1em 0 1em;
+  }
+
   .flip-card:active .flip-card-inner {
     transform: none;
   }
@@ -257,6 +261,11 @@ body {
   .term-card {
     flex-basis: 100%;
   }
+
+  .term-form {
+    margin: 2em .5em 0 .5em;
+  }
+
 }
 
 @media only screen and (max-height:640px) {

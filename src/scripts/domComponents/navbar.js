@@ -19,7 +19,7 @@ const renderNavbar = () => {
               <a class="nav-link" href="#" id="community">Community</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="flashCards">Flash Cards</a>
+              <a class="nav-link" href="#" id="flashCards">My Flash Cards</a>
             </li>
           </ul>
           <div class="nav-item" id="logButton">

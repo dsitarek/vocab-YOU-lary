@@ -10,6 +10,7 @@ const buildDom = () => {
           </div>
           <div id="formContainer"></div>
           <div id="cardContainer"></div>
+          <div id="flashContainer"></div>
         </div>`;
 };
 

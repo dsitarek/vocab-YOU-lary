@@ -39,6 +39,9 @@ const domClickEvents = (uid) => {
       if (document.getElementById('communitySortDropdown')) document.getElementById('communitySortDropdown').setAttribute('id', 'sortDropdown');
       filterDropdown();
     }
+    if (e.target.id.includes('new-card-btn')) {
+      document.querySelector('#flashCards').click();
+    }
   });
 };
 

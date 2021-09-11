@@ -1,7 +1,8 @@
-import { getTerms, getCommunityTerms } from '../data/termsData';
+import { getTerms, getCommunityTerms, getFlashCard } from '../data/termsData';
 import addTermForm from '../domComponents/addTermForm';
 import showTerms from '../components/terms';
 import sortBy from '../components/sortFunction';
+import flashCard from '../components/flashCard';
 
 const navEvents = (uid) => {
   document.querySelector('#addTerm').addEventListener('click', () => {
@@ -20,6 +21,11 @@ const navEvents = (uid) => {
     await getCommunityTerms().then((arr) => showTerms(arr, uid));
     if (document.getElementById('techFilter')) document.getElementById('techFilter').setAttribute('id', 'communityTechFilter');
     if (document.getElementById('sortDropdown')) document.getElementById('sortDropdown').setAttribute('id', 'communitySortDropdown');
+  });
+
+  document.querySelector('#flashCards').addEventListener('click', async () => {
+    await getFlashCard(uid).then((card) => flashCard(card));
+    document.getElementById('titleContainer').style.display = 'none';
   });
 };
 
